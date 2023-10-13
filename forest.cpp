@@ -9,14 +9,17 @@ int main(){
 	int ct;//количество треугольникв у ёлки
 	std::cout << "How many triangle in your pins?"<< std::endl;
 	std::cin >> ct;
-	int small;//высота малого треугольника
-	std::cout << "How many stars in your small triangle?"<< std::endl;
+	int small;//высота первого треугольника
+	std::cout << "How many stars in your first triangle?"<< std::endl;
         std::cin >> small;
-	int big;//высота большого треугольника
-        std::cout << "How many stars in your big triangle?"<< std::endl;
+	int big;//высота последнего треугольника
+        std::cout << "How many stars in your end triangle?"<< std::endl;
         std::cin >> big;
 	int change;//изменение размеров
 	change=(big-small)/(ct-1);
+	if (change<0){
+		change=-change;
+	}
 	int pine[ct];//массив размеров частей елки
 	for (int i=0; i<ct-1; ++i){
 		pine[i]=small+(change*i);
