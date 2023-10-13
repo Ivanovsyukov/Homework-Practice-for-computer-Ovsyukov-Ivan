@@ -10,25 +10,19 @@ int main(){
 	std::cout << "How many triangle in your pins?"<< std::endl;
 	std::cin >> ct;
 	int small;//высота первого треугольника
-	std::cout << "How many stars in your first triangle?"<< std::endl;
+	std::cout << "How many stars in your small triangle?"<< std::endl;
         std::cin >> small;
 	int big;//высота последнего треугольника
-        std::cout << "How many stars in your end triangle?"<< std::endl;
+        std::cout << "How many stars in your big triangle?"<< std::endl;
         std::cin >> big;
 	int change;//изменение размеров
 	change=(big-small)/(ct-1);
-	if (change<0){
-		change=-change;
-	}
 	int pine[ct];//массив размеров частей елки
 	for (int i=0; i<ct-1; ++i){
 		pine[i]=small+(change*i);
 	}
 	pine[ct-1]=big;
-/*	for (int i=0; i<ct; ++i){
-                std::cout << pine[i] << std::endl;
-        }
-*/	int n, l_p, l_z, r_p, r_z;//вводим переменные для работы: высота треугольника, кол-во пробелов слева, кол-во звезд слева, кол-во пробелов справа, количество звезд справа
+	int n, l_p, l_z, r_p, r_z;//вводим переменные для работы: высота треугольника, кол-во пробелов слева, кол-во звезд слева, кол-во пробелов справа, количество звезд справа
 	for (int kol=0; kol<ct; ++kol){
 		n=pine[kol];
 		change=big-n;
