@@ -3,7 +3,7 @@ int main(){
 	int cou;//количество ёлок
         std::cout << "How many pine you want?"<< std::endl;
         std::cin >> cou;
-	int len;//расстояние между ёлками
+	int len;//расстояние между ёлками.
         std::cout << "How many distans between your pine?"<< std::endl;
         std::cin >> len;
 	int ct;//количество треугольникв у ёлки
